@@ -1,0 +1,23 @@
+{
+  "name": "laravel-project",
+  "version": "1.0.0",
+  "description": "Frontend application using Electron with Integration of OpenAi API and Supabase.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reyntors/Laravel-Project.git"
+  },
+  "author": "Reynard Z. Torculas and Karl Borromeo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reyntors/Laravel-Project/issues"
+  },
+  "homepage": "https://github.com/reyntors/Laravel-Project#readme",
+  "devDependencies": {
+    "electron": "^24.3.0"
+  }
+}
