@@ -1,5 +1,5 @@
 const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld("axios", {
-  openAI: () => ipcRenderer.invoke('axios.openAI')
+  openAI: (sentence) => ipcRenderer.invoke('axios.openAI', sentence)
 });

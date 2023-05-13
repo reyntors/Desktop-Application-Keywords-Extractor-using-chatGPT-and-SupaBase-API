@@ -7,9 +7,8 @@ if (form) {
 
     const formData = new FormData(form);
 
-    const text = await window.axios.openAI();
-    document.getElementById("extract").innerHTML = text;
-    console.log(text);
+    const response = await window.axios.openAI(formData.get("sentence"));
+    document.getElementById("extract").innerHTML = JSON.stringify(response.choices[0].text).replace(/\\n/g, '');
   };
 }
 

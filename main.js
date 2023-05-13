@@ -1,6 +1,10 @@
+
+// Imported Modules
 const { app, BrowserWindow , ipcMain } = require("electron");
 const path = require("path");
+const axios = require('axios');
 
+// Main Window
 const isDev = true;
 
 const createWindow = () => {
@@ -20,10 +24,8 @@ const createWindow = () => {
 };
 
 app.whenReady().then(() => {
-  ipcMain.handle('axios.openAI', async function (){
-    
-    return "Hello World!";
-  })
+  //Initialize Functions
+  ipcMain.handle('axios.openAI', openAI);
 
   createWindow();
 
@@ -39,3 +41,34 @@ app.on("window-all-closed", () => {
     app.quit();
   }
 });
+
+ //Main Functions
+async function openAI(event, sentence){
+
+ let res = null;
+  
+ await axios({
+    method: 'post',
+    url: 'https://api.openai.com/v1/completions',
+    data: {
+      model: "text-davinci-003",
+      prompt: "Extract keywords from this text:\n\n" + sentence,
+      temperature: 0.5,
+      max_tokens: 60,
+      top_p: 1.0,
+      frequency_penalty: 0.8,
+      presence_penalty: 0.0
+    },
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer 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'
+    }
+  }).then(function (response){
+    res = response.data;
+  })
+  .catch(function (error){
+    res = error;
+  });
+    
+  return res;
+}
