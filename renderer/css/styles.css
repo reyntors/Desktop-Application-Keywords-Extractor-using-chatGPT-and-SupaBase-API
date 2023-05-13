@@ -6,10 +6,7 @@ body {
   }
 
 
-.input-single {
-    margin: 20px 0;
-    
-  }
+
 
 textarea {
     width: 50%;
@@ -23,7 +20,7 @@ textarea {
     margin: 0 auto;
   }
 
-  button {
+  input {
     display: inline-block;
     padding: 5px 135px;
     border: none;
@@ -37,17 +34,26 @@ textarea {
     margin: 0 auto;
   }
   
-  button:hover {
+  input:hover {
     background-color: #27ae60;
   }
 
-  img {
+  #icon1 {
     width: 50px;
     height: 50px;
     display: block;
     margin: 0 auto;
     padding-top: 5%;
+    animation: flip 3s infinite; /* Use the flip animation, repeat infinitely */
   }
+  
+  @keyframes flip {
+    0% { transform: rotateY(0deg); }
+    50% { transform: rotateY(180deg); }
+    100% { transform: rotateY(0deg); }
+  }
+  
+  
   #icon {
     width: 30px;
     height: 30px;
@@ -66,41 +72,4 @@ p{
 
 #instructions{
     text-align: center;
-}
-
-/* Modal CSS */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal content */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* Close button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
 }

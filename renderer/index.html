@@ -15,28 +15,21 @@
   </head>
   <link rel="stylesheet" href="./css/styles.css">
   <body>
-    <img src="./images/bulb icon.png" alt="Image Description">
+    <img id="icon1" src="./images/bulb icon.png" alt="Image Description">
     <h2>Keyword Extractor</h2>
-        
-      <div class="input-single">
-
-        <textarea id="note-textarea" placeholder="Enter a Paragraph Here..." rows="6"></textarea> <br>
-        <button id="generate" title="Start Generate a Keywords" onclick="extractKeywords()">Extract Keywords</button>
+    <div> 
+      <form id="form_sentence">
+        <textarea name="sentence" placeholder="Enter a Sentence Here..." rows="6"></textarea> <br>
+        <input   type="submit" value="Extract Keywords" title="Start Generate a Keywords"><br>
         <p id="instructions">Press the <strong>Extract Keywords</strong> Button to get a Keywords.</p>
-
-      </div> 
+      </form>
       
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h3>Extracted Keywords:</h3>
-          <ul id="keywords-list"></ul>
-        </div>
-      </div>
+      
       <footer>
         <img id="icon" src="./images/openai.png">
         <p>Powered By OpenAI</p>
       </footer>
+    </div>  
   </body>
   <script src="./js/renderer.js"></script>
 </html>
