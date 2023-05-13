@@ -10,12 +10,33 @@
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
+    
     <title>Keywords Extractor</title>
   </head>
+  <link rel="stylesheet" href="./css/styles.css">
   <body>
-    <h1>Hello from the other side!</h1>
-    <p>👋</p>
-    <p id="info"></p>
+    <img src="./images/bulb icon.png" alt="Image Description">
+    <h2>Keyword Extractor</h2>
+        
+      <div class="input-single">
+
+        <textarea id="note-textarea" placeholder="Enter a Paragraph Here..." rows="6"></textarea> <br>
+        <button id="generate" title="Start Generate a Keywords" onclick="extractKeywords()">Extract Keywords</button>
+        <p id="instructions">Press the <strong>Extract Keywords</strong> Button to get a Keywords.</p>
+
+      </div> 
+      
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Extracted Keywords:</h3>
+          <ul id="keywords-list"></ul>
+        </div>
+      </div>
+      <footer>
+        <img id="icon" src="./images/openai.png">
+        <p>Powered By OpenAI</p>
+      </footer>
   </body>
   <script src="./js/renderer.js"></script>
 </html>

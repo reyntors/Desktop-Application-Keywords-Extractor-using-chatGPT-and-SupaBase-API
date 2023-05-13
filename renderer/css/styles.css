@@ -1,0 +1,106 @@
+body {
+    background: linear-gradient(to bottom ,  #4389a2, #5c258d);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    min-height: 97vh;
+  }
+
+
+.input-single {
+    margin: 20px 0;
+    
+  }
+
+textarea {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    resize: none;
+    font-size: 1.0em;
+    display: block;
+    margin: 0 auto;
+  }
+
+  button {
+    display: inline-block;
+    padding: 5px 135px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4389a2;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  button:hover {
+    background-color: #27ae60;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 5%;
+  }
+  #icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 5%;
+  }
+
+h2{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+
+
+#instructions{
+    text-align: center;
+}
+
+/* Modal CSS */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
