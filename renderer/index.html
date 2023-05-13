@@ -19,11 +19,17 @@
     <h2>Keyword Extractor</h2>
     <div> 
       <form id="form_sentence">
-        <textarea name="sentence" placeholder="Enter a Sentence Here..." rows="6"></textarea> <br>
+        <textarea class="textarea" name="sentence" placeholder="Enter a Sentence Here..." rows="6"></textarea> <br>
         <input   type="submit" value="Extract Keywords" title="Start Generate a Keywords"><br>
         <p id="instructions">Press the <strong>Extract Keywords</strong> Button to get a Keywords.</p>
       </form>
       
+      <div>
+
+        <h3>Extracted Keywords:</h3>
+        <textarea id="extract"  rows="6" readonly></textarea>
+
+      </div>
       
       <footer>
         <img id="icon" src="./images/openai.png">

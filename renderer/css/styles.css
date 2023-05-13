@@ -8,7 +8,7 @@ body {
 
 
 
-textarea {
+.textarea {
     width: 50%;
     padding: 10px;
     border: none;
@@ -62,7 +62,7 @@ textarea {
     padding-top: 5%;
   }
 
-h2{
+h2, h3{
     text-align: center;
 }
 p{
@@ -72,4 +72,16 @@ p{
 
 #instructions{
     text-align: center;
+}
+
+#extract {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+  font-size: 1.0em;
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
 }

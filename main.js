@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow , ipcMain } = require("electron");
 const path = require("path");
 
 const isDev = true;
@@ -20,6 +20,11 @@ const createWindow = () => {
 };
 
 app.whenReady().then(() => {
+  ipcMain.handle('axios.openAI', async function (){
+    
+    return "Hello World!";
+  })
+
   createWindow();
 
   app.on("activate", () => {

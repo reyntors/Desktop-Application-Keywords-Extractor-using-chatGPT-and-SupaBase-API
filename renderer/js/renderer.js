@@ -1,12 +1,15 @@
 const form = document.getElementById("form_sentence");
+
+
 if (form) {
-  form.onsubmit = function (e) {
+  form.onsubmit = async function (e) {
     e.preventDefault();
 
     const formData = new FormData(form);
 
-    for (const [key, value] of formData) {
-      console.log(`${key}: ${value}\n`);
-    }
+    const text = await window.axios.openAI();
+    document.getElementById("extract").innerHTML = text;
+    console.log(text);
   };
 }
+
