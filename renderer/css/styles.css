@@ -1,16 +1,13 @@
 body {
     background: linear-gradient(to bottom ,  #4389a2, #5c258d);
     font-family: 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    min-height: 97vh;
+    font-size: 15px;
+    min-height: 97.6vh;
   }
 
-
-
-
 .textarea {
-    width: 50%;
-    padding: 10px;
+    width: 60%;
+    padding: 20px;
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -22,7 +19,7 @@ body {
 
   input {
     display: inline-block;
-    padding: 5px 135px;
+    padding: 5px 120px;
     border: none;
     border-radius: 5px;
     background-color: #4389a2;
@@ -32,6 +29,7 @@ body {
     transition: all 0.2s ease-in-out;
     display: block;
     margin: 0 auto;
+    
   }
   
   input:hover {
@@ -43,7 +41,7 @@ body {
     height: 50px;
     display: block;
     margin: 0 auto;
-    padding-top: 5%;
+    padding-top: 7%;
     animation: flip 3s infinite; /* Use the flip animation, repeat infinitely */
   }
   
@@ -67,15 +65,15 @@ h2, h3{
 }
 p{
     text-align: center;
+    margin-top: 0;
 }
-
 
 #instructions{
     text-align: center;
 }
 
 #extract {
-  width: 50%;
+  width: 60%;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -85,4 +83,8 @@ p{
   margin: 0 auto;
   background-color: transparent;
   color: #fff;
+  
+}
+#button-container {
+  text-align: right;
 }
