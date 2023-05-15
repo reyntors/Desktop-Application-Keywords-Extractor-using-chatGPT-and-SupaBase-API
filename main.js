@@ -6,7 +6,7 @@ const axios = require('axios');
 const dotenv = require('dotenv').config();
 
 // Main Window
-const isDev = true;
+const isDev = false;
 const isMac = process.platform === 'darwin';
 const template = [
   // { role: 'appMenu' }

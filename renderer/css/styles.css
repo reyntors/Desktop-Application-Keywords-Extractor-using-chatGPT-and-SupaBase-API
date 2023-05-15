@@ -66,6 +66,7 @@ h2, h3{
 p{
     text-align: center;
     margin-top: 0;
+    
 }
 
 #instructions{
@@ -87,4 +88,11 @@ p{
 }
 #button-container {
   text-align: right;
+}
+#icon2 {
+  width: 80px;
+  height: 20px;
+  display: block;
+  margin: 0 auto;
+  
 }
