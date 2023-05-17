@@ -24,6 +24,8 @@ async function getPrompts () {
     //Display
     const tbody = document.getElementById('tbl_prompts');
     tbody.innerHTML = htmlResult;
+
+    
 }
 
 // Set Btn Delete Prompt Click functionality from Table Prompts
@@ -35,9 +37,34 @@ if (tbl_prompts) {
             const response = await window.axios.supaBase('delete', id);
             console.log(response);
             
-            alertMessage("success", "Successfully deleted id " + id + '!');
             getPrompts();
+            alertMessage("success", "Successfully deleted id " + id + '!');
+            
             
         }
     };
 }
+
+function alertMessage(status, message){
+    window.Toastify.showToast({
+      text: message,
+      duration: 3000,
+      gravity: "top", 
+      position: "right", 
+      stopOnFocus: true, 
+      style: {
+          textAlign: "center",
+          background: status == "error" ? "#ff4d4f" : "#52c41a",
+          color: "#ffffff",
+          fontWeight: "bold",
+          padding: "10px",
+          borderRadius: "5px",
+          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+          fontFamily: "Arial, sans-serif",
+          fontSize: "16px",
+      }
+    });
+    
+    }
+    
+    

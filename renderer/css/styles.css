@@ -73,10 +73,9 @@ p{
     text-align: center;
 }
 
-#extract {
+.keyword-container {
   width: 60%;
   padding: 10px;
-  border: none;
   border-radius: 5px;
   resize: none;
   font-size: 1.0em;
@@ -84,8 +83,20 @@ p{
   margin: 0 auto;
   background-color: transparent;
   color: #fff;
-  
 }
+
+.keyword {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #4389a2;
+  border-radius: 5px;
+  margin-right: 5px;
+  background-color: #4389a2;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
 #button-container {
   text-align: right;
 }
@@ -95,5 +106,102 @@ p{
   display: block;
   margin: 0 auto;
   
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Theme Styles */
+.theme-bg-surface {
+  background-color: #f0f2f5;
+}
+
+.theme-bg-primary {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+/* Card Styles */
+.card {
+  border-radius: 6px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5%;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Table Styles */
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background-color: #5c258d;
+  color: #1890ff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(33, 99, 221, 0.329);
+}
+
+.table-hover tbody tr:hover {
+  background-color: #65b0d3;
+  cursor: pointer;
+}
+
+
+
+/* Spinner Styles */
+.spinner-border {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: text-bottom;
+  border: 0.25em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border 0.75s linear infinite;
+  
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Delete Button Styles */
+.btn-danger {
+  display: inline-block;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4389a2;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-danger:hover {
+  background-color: #ff3333;
+  color: #ffffff;
+}
+
+#power{
+
+  padding-top: 3%;
 }
 

@@ -60,8 +60,8 @@ const createWindow = () => {
 // Application Logs Window
 function logsWindow () {
   const logs = new BrowserWindow({
-    width: 900,
-    height: 600,
+    width: 600,
+    height: 800,
     alwaysOnTop: true,
     webPreferences: {
       nodeIntegration: true,

@@ -20,18 +20,27 @@ if (form) {
     
     // Call openAI function
     const openAIResponse = await window.axios.openAI(sentence);
-    const keywords = JSON.stringify(openAIResponse.choices[0].text).replace(/\\n/g, '');
+    const keywords = openAIResponse.choices[0].text.replace(/\\n/g, '');
     
     // Call Supabase API to insert the data
     const supaBaseResponse = await window.axios.supaBase('post', '', {
       sentence: sentence,
       keywords: keywords
     });
+   
+   
     
-    console.log(supaBaseResponse);
+
+    // Generate the HTML for the keywords
+    const keywordHTML = keywords
+    .split(" ")
+    .map((keyword) => `<span class="keyword">${keyword}</span>`)
+    .join(" ");
+
+    // Set the HTML content of the textarea
+    document.getElementById("extract").innerHTML = keywordHTML;
     
-    document.getElementById("extract").innerHTML = keywords;
-  };
+      };
 }
 
 function alertMessage(status,sentence){
