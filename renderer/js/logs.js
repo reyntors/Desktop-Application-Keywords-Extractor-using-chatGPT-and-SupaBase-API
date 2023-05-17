@@ -11,22 +11,17 @@ async function getPrompts () {
 
 
         htmlResult += '<tr>' +
-            '<th scope="row">' +  response[key].prompt_id + '</th>' +
-            '<td>' + response[key].sentence + '</td>' +
-            '<td>' + response[key].keywords + '</td>' +
-            '<td>' + date.toLocaleString('en-US', { timeZone: 'UTC' }) + '</td>' +
-            '<td>' + 
-                '<div class="btn-group" role="group">' +
-                    '<button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">' +
-                        'Action' +
-                    '</button>' +
-                    '<ul class="dropdown-menu">' +
-                        '<li><a id="btn_prompts_del" class="dropdown-item" href="#" name="' + response[key].prompt_id + '">Remove</a></li>' +
-                    '</ul>' +
-                '</div>' +
+        '<th scope="row">' + response[key].prompt_id + '</th>' +
+        '<td>' + response[key].sentence + '</td>' +
+        '<td>' + response[key].keywords + '</td>' +
+        '<td>' + date.toLocaleString('en-US', { timeZone: 'UTC' }) + '</td>' +
+        '<td>' +
+        '<button id="btn_prompts_del" class="btn btn-danger btn-sm" name="' + response[key].prompt_id + '">Delete</button>' +
+        '</td>' +
         '</tr>';
-    });
+});
 
+    //Display
     const tbody = document.getElementById('tbl_prompts');
     tbody.innerHTML = htmlResult;
 }
@@ -42,6 +37,7 @@ if (tbl_prompts) {
             
             alertMessage("success", "Successfully deleted id " + id + '!');
             getPrompts();
+            
         }
     };
 }
