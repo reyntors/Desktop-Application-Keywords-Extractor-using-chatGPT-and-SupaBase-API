@@ -3,4 +3,4 @@
 Application Development and Emerging Technologies
 Developer(s) 
 Reynard Z. Torculas
-Karl Borromeo
+
